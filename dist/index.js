@@ -1,0 +1,57 @@
+/**
+ * Limestone — satellite Dripnex theme.
+ * Token layer only. Same contract as a community theme repo.
+ * Must be CommonJS.
+ */
+
+const TOKENS = {
+  '--bg-base': '#ece8e1',
+  '--bg-surface': '#e4dfd6',
+  '--bg-elevated': '#f4f1eb',
+  '--bg-inset': '#d9d3c8',
+  '--bg-hover': 'rgba(44, 42, 38, 0.06)',
+  '--bg-active': 'rgba(44, 42, 38, 0.1)',
+  '--text-primary': '#2c2a26',
+  '--text-secondary': 'rgba(44, 42, 38, 0.74)',
+  '--text-muted': 'rgba(44, 42, 38, 0.52)',
+  '--text-faint': 'rgba(44, 42, 38, 0.34)',
+  '--border': 'rgba(44, 42, 38, 0.12)',
+  '--border-subtle': 'rgba(44, 42, 38, 0.07)',
+  '--border-strong': 'rgba(44, 42, 38, 0.18)',
+  '--accent': '#6b6358',
+  '--accent-hover': '#524c44',
+  '--accent-muted': 'rgba(107, 99, 88, 0.16)',
+  '--accent-subtle': 'rgba(107, 99, 88, 0.1)',
+  '--glass-bg': 'rgba(236, 232, 225, 0.92)',
+  '--glass-border': 'rgba(44, 42, 38, 0.1)',
+  '--glass-bg-menu': 'rgba(244, 241, 235, 0.96)',
+  '--glass-border-menu': 'rgba(44, 42, 38, 0.1)',
+  '--status-active': '#6b6358',
+  '--status-on-hold': '#b8862a',
+  '--status-completed': '#4a7a58',
+  '--status-dropped': '#a85a5a',
+};
+
+module.exports = {
+  id: 'theme-limestone',
+  name: 'Limestone',
+  version: '0.1.0',
+  description: 'Warm-neutral stone. Editorial paper, not yellow cream.',
+
+  activate(context) {
+    const remove = context.registerTheme({
+      id: 'dripnex-limestone',
+      name: 'Limestone',
+      description: 'Limestone walls, charcoal ink. Book light without parchment yellow.',
+      author: 'Dripnex',
+      colorScheme: 'light',
+      tokens: TOKENS,
+    });
+
+    return {
+      dispose() {
+        remove();
+      },
+    };
+  },
+};

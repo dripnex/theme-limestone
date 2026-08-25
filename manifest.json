@@ -1,0 +1,7 @@
+{
+  "id": "theme-limestone",
+  "name": "Limestone",
+  "version": "0.1.0",
+  "description": "Warm-neutral stone. Editorial paper, not yellow cream.",
+  "main": "dist/index.js"
+}
